@@ -5,6 +5,7 @@ const linkSchema = new mongoose.Schema({
         type: String,
         required: true,
         createdAt: new Date(),
+        unique: true,
     },
 });
 
