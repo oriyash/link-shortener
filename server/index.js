@@ -1,4 +1,5 @@
 // importing deps
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
@@ -11,9 +12,8 @@ import indexRoutes from "./routes/index.js";
 const app = express();
 
 // important consts
-const PORT = 5000;
-const dbUrl =
-    "mongodb+srv://admin:ZvhTCJjBPi3ApbhJ@cluster0.ah497.mongodb.net/?retryWrites=true&w=majority";
+const PORT = process.env.PORT;
+const dbUrl = process.env.DBURL;
 
 // connest to db
 try {
